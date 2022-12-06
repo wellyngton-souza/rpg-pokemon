@@ -88,3 +88,11 @@ function escolherPokemonFecha() {
     canvas.style.display = "block";
 }
 
+//intro
+window.addEventListener('load', function(){
+    setTimeout(function(){
+        center_pokemon.style.display = "block";
+        var Pokemon_The_Game = document.getElementById('Pokemon_The_Game');
+        Pokemon_The_Game.style.display = "none";
+    }, 3000)
+})

@@ -101,4 +101,27 @@ section {
 
 #center_pokemon{
     height: 100vh;
+    display: none;
+}
+
+#Pokemon_The_Game{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    animation: intro infinite 3s;
+}
+
+@keyframes intro {
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 100%;
+    }
 }
