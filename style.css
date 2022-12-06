@@ -1,0 +1,87 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    height: 30vh;
+}
+
+.pk-enemy{
+    padding: 0 10px 0 0;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: rgb(233, 80, 80);
+}
+
+.pk-my{
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(11, 137, 255);
+}
+
+#barra1{
+    width: 100px;
+    height: 10px;
+    background-color: #19ec12;
+}
+#barra2{
+    width: 100px;
+    height: 10px;
+    background-color: #19ec12;
+}
+#barranull{
+    width: 100px;
+    height: 10px;
+    background-color: #000000;
+}
+
+.barra-habilidade{
+    height: 40vh;
+    margin: 10px;
+    background-color: rgb(208, 214, 115);
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#ataque1{
+    background-color: aquamarine;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ataque2{
+    background-color: #ff7f7f;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ataque3{
+    background-color: rgb(60, 245, 4);
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ataque4{
+    background-color: rgb(255, 0, 242);
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
