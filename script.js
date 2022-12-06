@@ -26,6 +26,13 @@ ataque2: "Boneco Postiço", dano2: 10 ,
 ataque3: "Números Tenebrosos", dano3: 30,
 ataque4: "Reflexo", dano4: 15,
 imagem: "./assets/mimikyu.gif"};
+//garchomp
+var garchomp = {nome: "garchomp" ,
+ataque1: "Investida do Dragão" , dano1: 20 ,
+ataque2: "Garra de Dragão", dano2: 10 ,
+ataque3: "Golpe Sônico", dano3: 30,
+ataque4: "Lâmina do Dragão", dano4: 15,
+imagem: "./assets/garchomp.gif"};
 
 var nm_my_pokemon = document.getElementById('nm_my_pokemon');
 var barra1 = document.getElementById('barra1');
@@ -61,6 +68,12 @@ function selecionadoMimikyu() {
     carregarPokemon(pokemonSelecionado);
 }
 
+function selecionadoGarchomp() {
+    escolherPokemonFecha();
+    var pokemonSelecionado = garchomp;
+    carregarPokemon(pokemonSelecionado);
+}
+
 function carregarPokemon(pokemonSelecionado){
     nm_my_pokemon.innerHTML = pokemonSelecionado.nome;
     document.getElementById('my_pokemonIMG').src = pokemonSelecionado.imagem;
@@ -75,7 +88,3 @@ function escolherPokemonFecha() {
     canvas.style.display = "block";
 }
 
-function atacar1(pokemonSelecionado){
-    var hpAtual = hp - pokemonSelecionado.dano1;
-    barra2.style.width = hpAtual + "px";
-}
