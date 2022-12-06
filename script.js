@@ -11,7 +11,7 @@ ataque1: "Garra do Dragão" , dano1: 20 ,
 ataque2: "Explosão de Fogo", dano2: 10 ,
 ataque3: "Onda de Calor", dano3: 30,
 ataque4: "Ataque de Asa", dano4: 15,
-imagem: "./assets/charizard.gif"};
+imagem: "./assets/Charizard.gif"};
 //gengar
 var gengar = {nome: "gengar" ,
 ataque1: "Portão do Mundo Inferior" , dano1: 20 ,
@@ -76,5 +76,6 @@ function escolherPokemonFecha() {
 }
 
 function atacar1(pokemonSelecionado){
-    barra2.style.width = pokemonSelecionado.dano1 + 'px';
+    var hpAtual = hp - pokemonSelecionado.dano1;
+    barra2.style.width = hpAtual + "px";
 }
