@@ -12,6 +12,13 @@ ataque2: "Explosão de Fogo", dano2: 10 ,
 ataque3: "Onda de Calor", dano3: 30,
 ataque4: "Ataque de Asa", dano4: 15,
 imagem: "./assets/charizard.gif"};
+//gengar
+var gengar = {nome: "gengar" ,
+ataque1: "Portão do Mundo Inferior" , dano1: 20 ,
+ataque2: "Levitação", dano2: 10 ,
+ataque3: "Sacudida Vital", dano3: 30,
+ataque4: "Boneco Postiço", dano4: 15,
+imagem: "./assets/gengar.gif"};
 //mimikyu
 var mimikyu = {nome: "mimikyu" ,
 ataque1: "Pior Presente" , dano1: 20 ,
@@ -27,13 +34,47 @@ var ataque1 = document.getElementById('ataque1');
 var ataque2 = document.getElementById('ataque2');
 var ataque3 = document.getElementById('ataque3');
 var ataque4 = document.getElementById('ataque4');
+var center_pokemon = document.getElementById('center_pokemon');
+const hp = 100;
 
-var pokemonSelecionado = picachu;
+function selecionadoPicachu() {
+    escolherPokemonFecha();
+    var pokemonSelecionado = picachu;
+    carregarPokemon(pokemonSelecionado);
+}
 
-nm_my_pokemon.innerHTML = pokemonSelecionado.nome;
-document.getElementById('my_pokemonIMG').src = pokemonSelecionado.imagem;
-ataque1.innerHTML = pokemonSelecionado.ataque1;
-ataque2.innerHTML = pokemonSelecionado.ataque2;
-ataque3.innerHTML = pokemonSelecionado.ataque3;
-ataque4.innerHTML = pokemonSelecionado.ataque4;
-barra2.style.width = 40 + "px";
+function selecionadoCharizard() {
+    escolherPokemonFecha();
+    var pokemonSelecionado = charizard;
+    carregarPokemon(pokemonSelecionado);
+}
+
+function selecionadoGengar() {
+    escolherPokemonFecha();
+    var pokemonSelecionado = gengar;
+    carregarPokemon(pokemonSelecionado);
+}
+
+function selecionadoMimikyu() {
+    escolherPokemonFecha();
+    var pokemonSelecionado = mimikyu;
+    carregarPokemon(pokemonSelecionado);
+}
+
+function carregarPokemon(pokemonSelecionado){
+    nm_my_pokemon.innerHTML = pokemonSelecionado.nome;
+    document.getElementById('my_pokemonIMG').src = pokemonSelecionado.imagem;
+    ataque1.innerHTML = pokemonSelecionado.ataque1;
+    ataque2.innerHTML = pokemonSelecionado.ataque2;
+    ataque3.innerHTML = pokemonSelecionado.ataque3;
+    ataque4.innerHTML = pokemonSelecionado.ataque4;
+}
+
+function escolherPokemonFecha() {
+    center_pokemon.style.display = "none";
+    canvas.style.display = "block";
+}
+
+function atacar1(pokemonSelecionado){
+    barra2.style.width = pokemonSelecionado.dano1 + 'px';
+}

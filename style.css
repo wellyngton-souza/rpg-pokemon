@@ -7,6 +7,10 @@ section {
     height: 30vh;
 }
 
+#canvas{
+    display: none;
+}
+
 .pk-enemy{
     padding: 0 10px 0 0;
     height: 30vh;
@@ -84,4 +88,18 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#escolherPokemon{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+}
+
+#center_pokemon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
