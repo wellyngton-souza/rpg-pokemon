@@ -139,38 +139,6 @@ section {
     padding: 100px;
 }
 
-.player1bate{
-    animation: Player1Bate 2s;
-}
-
-.player2bate{
-    animation: Player2Bate 2s;
-}
-
-@keyframes Player1Bate{
-    0%{
-        margin-left: 0%;
-    }
-    50%{
-        margin-left: 50%;
-    }
-    100%{
-        margin-left: 0%;
-    }
-}
-
-@keyframes Player2Bate{
-    0%{
-        margin-right: 0%;
-    }
-    50%{
-        margin-right: 50%;
-    }
-    100%{
-        margin-right: 0%;
-    }
-}
-
 @keyframes intro {
     0%{
         opacity: 0%;
