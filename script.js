@@ -225,11 +225,14 @@ function fecharEscolhaPokemonInimigo(){
 }
 
 function receberDano(){
-    permissaoAtaque = 1;
-    setTimeout(function(){
-        barra1.style.width = (barra1.clientWidth - 20) + "px";
-        permissaoAtaque = 0;
-    }, 1000)
+    if (barra2.clientWidth != 0)
+    {
+        permissaoAtaque = 1;
+        setTimeout(function(){
+            barra1.style.width = (barra1.clientWidth - 20) + "px";
+            permissaoAtaque = 0;
+        }, 1000)
+    }
 }
 
 document.addEventListener("keypress",function(e){
