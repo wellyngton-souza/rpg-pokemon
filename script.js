@@ -231,6 +231,10 @@ function receberDano(){
         setTimeout(function(){
             barra1.style.width = (barra1.clientWidth - 20) + "px";
             permissaoAtaque = 0;
+            if (barra1.clientWidth == 0)
+            {
+                fimJogo.style.display = "block";
+            }
         }, 1000)
     }
 }
