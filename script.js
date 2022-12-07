@@ -1,6 +1,6 @@
 //picachu
 var picachu = {nome: "picachu" ,
-ataque1: "choque do trovão" , dano1: 40 ,
+ataque1: "choque do trovão" , dano1: 30,
 ataque2: "esfera eletrica", dano2: 10 ,
 ataque3: "investida trovão", dano3: 30,
 ataque4: "ataque rapido", dano4: 15,
@@ -22,7 +22,7 @@ imagem: "./assets/gengar.gif"};
 //mimikyu
 var mimikyu = {nome: "mimikyu" ,
 ataque1: "Pior Presente" , dano1: 20 ,
-ataque2: "Boneco Postiço", dano2: 10 ,
+ataque2: "Boneco Postiço", dano2: 20 ,
 ataque3: "Números Tenebrosos", dano3: 30,
 ataque4: "Reflexo", dano4: 15,
 imagem: "./assets/mimikyu.gif"};
@@ -106,62 +106,74 @@ window.addEventListener('load', function(){
 })
 
 function atacar1(){
-    if (permissaoAtaque == 0)
+    if (barra1.clientWidth != 0)
     {
-        var hp = barra2.clientWidth;
-        hp = hp - pokemonSelecionado1.dano1;
-        if (hp < pokemonSelecionado1.dano1)
+        if (permissaoAtaque == 0)
         {
-            barra2.style.width = "0px";
+            var hp = barra2.clientWidth;
+            hp = hp - pokemonSelecionado1.dano1;
+            if (hp < pokemonSelecionado1.dano1)
+            {
+                barra2.style.width = "0px";
+            }
+            barra2.style.width = hp + "px";
+            inimigoMorto();
+            receberDano();
         }
-        barra2.style.width = hp + "px";
-        inimigoMorto();
-        receberDano();
     }
 }
 
 function atacar2(){
-    if (permissaoAtaque == 0)
+    if (barra1.clientWidth != 0)
     {
-        var hp = barra2.clientWidth;
-        hp = hp - pokemonSelecionado1.dano2;
-        if (hp < pokemonSelecionado1.dano2)
+        if (permissaoAtaque == 0)
         {
-            barra2.style.width = "0px";
+            var hp = barra2.clientWidth;
+            hp = hp - pokemonSelecionado1.dano2;
+            if (hp < pokemonSelecionado1.dano2)
+            {
+                barra2.style.width = "0px";
+            }
+            barra2.style.width = hp + "px";
+            inimigoMorto();
+            receberDano();
         }
-        barra2.style.width = hp + "px";
-        inimigoMorto();
-        receberDano();
     }
 }
 
 function atacar3(){
-    if (permissaoAtaque == 0)
+    if (barra1.clientWidth != 0)
     {
-        var hp = barra2.clientWidth;
-        hp = hp - pokemonSelecionado1.dano3;
-        if (hp < pokemonSelecionado1.dano3)
+        if (permissaoAtaque == 0)
         {
-            barra2.style.width = "0px";
+            var hp = barra2.clientWidth;
+            hp = hp - pokemonSelecionado1.dano3;
+            if (hp < pokemonSelecionado1.dano3)
+            {
+                barra2.style.width = "0px";
+            }
+            barra2.style.width = hp + "px";
+            inimigoMorto();
+            receberDano();
         }
-        barra2.style.width = hp + "px";
-        inimigoMorto();
-        receberDano();
     }
 }
 
 function atacar4(){
-    if (permissaoAtaque == 0)
+    if (barra1.clientWidth != 0)
     {
-        var hp = barra2.clientWidth;
-        hp = hp - pokemonSelecionado1.dano4;
-        if (hp < pokemonSelecionado1.dano4)
+        if (permissaoAtaque == 0)
         {
-            barra2.style.width = "0px";
+            var hp = barra2.clientWidth;
+            hp = hp - pokemonSelecionado1.dano4;
+            if (hp < pokemonSelecionado1.dano4)
+            {
+                barra2.style.width = "0px";
+            }
+            barra2.style.width = hp + "px";
+            inimigoMorto();
+            receberDano();
         }
-        barra2.style.width = hp + "px";
-        inimigoMorto();
-        receberDano();
     }
 }
 
