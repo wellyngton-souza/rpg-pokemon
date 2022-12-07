@@ -10,10 +10,10 @@
     <div id="canvas">
         <section>
             <div class="pk-enemy">
-                <img width="150px" src="./assets/Charizard.gif">
+                <img id="enemy_pokemonIMG" src="./assets/Charizard.gif" width="150px">
                 <div>
                     <div id="barranull"><div id="barra2"></div></div>
-                    charizard
+                    <a id="nm_enemy_pokemon">charizard</a>
                 </div>
             </div>
         </section>
@@ -43,8 +43,25 @@
             <img width="150px" src="./assets/garchomp.gif" onclick="selecionadoGarchomp()">
         </div>
     </div>
+    <div id="center_pokemonEnemy">
+        <div id="escolherPokemonInimigo">
+        Escolha o pokemon Inimigo
+            <img width="150px" src="./assets/picachu.jpg" onclick="selecionadoPicachuEnemy()">
+            <img width="150px" src="./assets/mimikyu.gif" onclick="selecionadoMimikyuEnemy()">
+            <img width="150px" src="./assets/Charizard.gif" onclick="selecionadoCharizardEnemy()">
+            <img width="150px" src="./assets/gengar.gif" onclick="selecionadoGengarEnemy()">
+            <img width="150px" src="./assets/garchomp.gif" onclick="selecionadoGarchompEnemy()">
+        </div>
+    </div>
     <div id="Pokemon_The_Game">
         <h1>rpg-pokemon</h1>
+    </div>
+    <div id="fimJogo">
+        <h2>Fim de Jogo</h2>
+        <hr>
+        <p onclick="escolherPokemonAbre()">Escolher Meu Pokemon</p>
+        <p onclick="batalharDenovo()">Batalhar de Novo</p>
+        <p onclick="escolherInimigo()">Escolher Pokemon Inimgo</p>
     </div>
     <script src="script.js"></script>
 </body>
