@@ -111,7 +111,7 @@ section {
     transform: translate(-50%, -50%);
     text-align: center;
 
-    animation: intro infinite 3s;
+    animation: intro 3s;
 }
 
 #fimJogo{
@@ -139,11 +139,43 @@ section {
     padding: 100px;
 }
 
+.player1bate{
+    animation: Player1Bate 2s;
+}
+
+.player2bate{
+    animation: Player2Bate 2s;
+}
+
+@keyframes Player1Bate{
+    0%{
+        margin-left: 0%;
+    }
+    50%{
+        margin-left: 50%;
+    }
+    100%{
+        margin-left: 0%;
+    }
+}
+
+@keyframes Player2Bate{
+    0%{
+        margin-right: 0%;
+    }
+    50%{
+        margin-right: 50%;
+    }
+    100%{
+        margin-right: 0%;
+    }
+}
+
 @keyframes intro {
     0%{
         opacity: 0%;
     }
-    50%{
+    80%{
         opacity: 100%;
     }
     100%{
