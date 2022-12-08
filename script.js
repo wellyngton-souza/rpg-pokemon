@@ -48,6 +48,8 @@ var center_pokemonEnemy = document.getElementById('center_pokemonEnemy');
 
 var pokemonSelecionado1;
 var pokemonSelecionado2;
+var musicInicio;
+var musicaBatalha;
 var permissaoAtaque = 0;
 
 function selecionadoPicachu() {
@@ -87,6 +89,7 @@ function carregarPokemon(pokemonSelecionado1){
     ataque2.innerHTML = pokemonSelecionado1.ataque2;
     ataque3.innerHTML = pokemonSelecionado1.ataque3;
     ataque4.innerHTML = pokemonSelecionado1.ataque4;
+    TocarMusicaBatalha();
 }
 
 function escolherPokemonFecha() {
@@ -102,8 +105,27 @@ window.addEventListener('load', function(){
         center_pokemon.style.display = "block";
         var Pokemon_The_Game = document.getElementById('Pokemon_The_Game');
         Pokemon_The_Game.style.display = "none";
+        tocarmusica();
     }, 3000)
+    tocarIntro();
 })
+
+function tocarIntro(){
+    var musicIntro = document.querySelector('#musicIntro');
+    musicIntro.play();
+}
+
+function tocarmusica(){
+    var musicInicio = document.querySelector('#musicInicio');
+    musicInicio.play();
+}
+
+function TocarMusicaBatalha(){
+    musicaBatalha = document.querySelector('#musicBatalha');
+    musicInicio = document.querySelector('#musicInicio');
+    musicInicio.pause();
+    musicaBatalha.play();
+}
 
 function atacar1(){
     if (barra1.clientWidth != 0)
